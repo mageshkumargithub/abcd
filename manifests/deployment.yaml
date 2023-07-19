@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: TestAuto
+  name: autodeploy
   labels:
-    app: TestAuto
+    app: autodeploy
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: TestAuto
+      app: autodeploy
   template:
     metadata:
       labels:
-        app: TestAuto
+        app: autodeploy
     spec:
       containers:
-        - name: TestAuto
-          image: dcakstestregistry.azurecr.io/image-workflow-1689745545439:latest
+        - name: autodeploy
+          image: dcakstestregistry.azurecr.io/image-workflow-1689769758243:latest
           ports:
-            - containerPort: 8000
+            - containerPort: 80
