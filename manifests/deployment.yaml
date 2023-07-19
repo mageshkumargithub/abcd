@@ -4,7 +4,7 @@ metadata:
   name: autodeploy
   labels:
     app: autodeploy
-  namespace: namespace-workflow-1689683569945
+  namespace: namespace-workflow-1689743432020
 spec:
   replicas: 1
   selector:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: autodeploy
-          image: DCAKSTESTregistry.azurecr.io/image-workflow-1689683569945:latest
+          image: dcakstestregistry.azurecr.io/image-workflow-1689743432020:latest
           ports:
-            - containerPort: 8000
+            - containerPort: 80
