@@ -9,7 +9,7 @@ env:
     AZURE_CONTAINER_REGISTRY: DCAKSTESTregistry
     CLUSTER_NAME: DC_AKS_TEST
     CLUSTER_RESOURCE_GROUP: DC_AKS_RG
-    CONTAINER_NAME: image-workflow-1689683569945
+    CONTAINER_NAME: image-workflow-1689743432020
     DEPLOYMENT_MANIFEST_PATH: |
         manifests/deployment.yaml
         manifests/service.yaml
@@ -62,4 +62,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: namespace-workflow-1689683569945
+                namespace: namespace-workflow-1689743432020
